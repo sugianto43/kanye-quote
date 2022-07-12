@@ -62,7 +62,7 @@ function App() {
         <h2>My Quotes</h2>
         <form>
           <input value={myQuote} type='text' onChange={(e) => setMyQuote(e.target.value)} />
-          <button type="submit" onClick={submitQuote}>Submit</button>
+          <button type="submit" onClick={submitQuote} disabled={!myQuote}>Submit</button>
         </form>
         <ol>
           {myQuoteList.map((item, idx) => (<li key={idx} style={{ listStyle: 'none' }}>{item}</li>))}
